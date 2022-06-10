@@ -46,16 +46,22 @@ public class Ex04 {
 				arr.add(s);
 				break;
 			case 2:
-				StInfo ss = arr.get(0);
+				for(int i =0;i<arr.size();i++) {
+				StInfo ss = arr.get(i);
 				System.out.println("이름 : "+ss.getName());
-				System.out.println("나이 : "+ss.getAge());
-				ss = arr.get(1);
-				System.out.println("이름 : "+ss.getName());
-				System.out.println("나이 : "+ss.getAge());
-				
-				
+				System.out.println("나이 : "+ss.getAge());				
+				}				
 				break;
-			case 3:break;
+			case 3:
+				System.out.println("찾을 이름 입력");
+				name = scan.next();
+				for(StInfo st : arr) {
+					if(st.getName().equals(name)) {
+						System.out.println("이름 : "+st.getName());
+						System.out.println("나이 : "+st.getAge());
+					}
+				}
+				break;
 			}
 		}
 	}
